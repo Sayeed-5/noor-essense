@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #1a1a14;
+  --color-charcoal-dark: #111109;
+  --color-charcoal-light: #252520;
+  --color-ivory: #f0ebe0;
+  --color-ivory-dark: #e8e2d4;
+  --color-gold: #c9a84c;
+  --color-gold-light: #d4b86a;
+  --color-gold-dark: #a8882a;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background: #1a1a14;
+  color: #f0ebe0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #111109; }
+::-webkit-scrollbar-thumb { background: #c9a84c; }
+
+/* ── Typography helpers ── */
+.font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+.font-sans  { font-family: 'Montserrat', sans-serif; }
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes shimmer {
+  0%   { background-position: -300% center; }
+  100% { background-position: 300% center; }
+}
+
+.anim-fade-up  { animation: fadeUp  0.7s ease both; }
+.anim-fade-in  { animation: fadeIn  0.7s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.35s; }
+.delay-4 { animation-delay: 0.5s; }
+
+/* ── Gold shimmer heading ── */
+.gold-italic {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  color: #c9a84c;
+}
+
+/* ── Small label / eyebrow ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #c9a84c;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: #c9a84c;
+}
+
+/* ── Gold line ── */
+.gold-line {
+  width: 48px;
+  height: 1px;
+  background: #c9a84c;
+}
+
+/* ── Buttons ── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: #c9a84c;
+  color: #1a1a14;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: #d4b86a;
+  box-shadow: 0 6px 24px rgba(201,168,76,0.35);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #f0ebe0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 12px 0;
+}
+.btn-outline:hover { color: #c9a84c; }
+
+/* ── Discover link ── */
+.discover-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  font-weight: 500;
+  cursor: pointer;
+  transition: gap 0.3s ease;
+  text-decoration: none;
+}
+.discover-link:hover { gap: 10px; color: #d4b86a; }
+
+/* ── Nav ── */
+.nav-link {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #f0ebe0;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: #c9a84c;
+  transition: width 0.3s ease;
+}
+.nav-link:hover, .nav-link.active { color: #c9a84c; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+/* ── Card ── */
+.perfume-card {
+  background: #252520;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+}
+.perfume-card:hover {
+  box-shadow: 0 16px 48px rgba(201,168,76,0.18);
+  transform: translateY(-6px);
+}
+.perfume-card .card-img {
+  overflow: hidden;
+}
+.perfume-card .card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.perfume-card:hover .card-img img {
+  transform: scale(1.06);
+}
+
+/* ── Filter tab ── */
+.filter-tab {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 8px 18px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: transparent;
+  color: #4a4a40;
+  font-family: 'Montserrat', sans-serif;
+}
+.filter-tab.active {
+  background: #1a1a14;
+  color: #f0ebe0;
+  border-color: transparent;
+}
+.filter-tab:not(.active):hover {
+  color: #1a1a14;
+}
+
+/* ── Principles card ── */
+.principle-card {
+  border: 1px solid #d4c9b0;
+  padding: 32px 28px;
+  background: transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.principle-card:hover {
+  border-color: #c9a84c;
+  box-shadow: 0 4px 24px rgba(201,168,76,0.12);
+}
+
+/* ── New arrival badge ── */
+.badge-new {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1a1a14;
+  background: #c9a84c;
+  padding: 3px 10px;
+}
+
+/* ── Img zoom on hover ── */
+.img-zoom { overflow: hidden; }
+.img-zoom img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; }
+.img-zoom:hover img { transform: scale(1.05); }
+
+/* ── Divider ── */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c40, transparent);
+}
