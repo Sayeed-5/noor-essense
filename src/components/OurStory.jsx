@@ -86,7 +86,7 @@ export default function OurStory() {
             Founded upon centuries-old{" "}
             <span style={{ color: "#f0ebe0" }}>Eastern fragrance rituals</span> and elevated
             through modern{" "}
-            <span style={{ color: "#f0ebe0" }}>French haute parfumerie</span>, Noor Essence
+            <span style={{ color: "#f0ebe0" }}>French haute parfumerie</span>, Chandan Craft
             curates olfactory experiences of unmatched purity.
           </p>
           <p style={{

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 const NAV_LINKS = [
-  { label: "Home",           href: "#home" },
-  { label: "Our Collection", href: "#collection" },
-  { label: "New Arrivals",   href: "#new-arrivals" },
-  { label: "Our Story",      href: "#our-story" },
+  { label: "Home",           href: "/" },
+  { label: "Our Collection", href: "/collection" },
+  { label: "New Arrivals",   href: "/#new-arrivals" },
+  { label: "Our Story",      href: "/#our-story" },
   { label: "Contact",        href: "#contact" },
 ];
 
@@ -52,22 +52,11 @@ export default function Navbar() {
             gap: 24,
           }}
         >
-          {/* Logo */}
-          <a href="#home" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }} onClick={() => handleNavClick("#home")}>
-            {/* Mini SVG perfume icon */}
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M9 8 Q9 4 14 4 Q19 4 19 8 L19 10 L22 10 L22 25 L6 25 L6 10 L9 10 Z" fill="#c9a84c" opacity="0.9"/>
-              <path d="M11.5 4 Q14 1 16.5 4" stroke="#c9a84c" strokeWidth="1.2" fill="none"/>
-              <path d="M10 16 Q14 14 18 16" stroke="rgba(255,255,255,0.3)" strokeWidth="0.8" fill="none"/>
-            </svg>
-            <div>
-              <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.22em", color: "#c9a84c", lineHeight: 1 }}>
-                NOOR ESSENCE
-              </div>
-              <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 9, letterSpacing: "0.18em", color: "#a89060", lineHeight: 1.2, marginTop: 1 }}>
-                HAUTE PARFUMERIE & ATTAR
-              </div>
-            </div>
+          <a href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", flexShrink: 0 }} onClick={() => handleNavClick("/")}>
+            <img src="/logo.png" alt="Chandan Craft" style={{ height: 32, width: "auto", objectFit: "contain" }} />
+            <span style={{ marginLeft: 12, fontFamily: "'Cormorant Garamond', serif", fontSize: 20, fontWeight: 500, color: "#f0ebe0", letterSpacing: "0.05em" }}>
+              Chandan Craft
+            </span>
           </a>
 
           {/* Desktop Nav */}
@@ -86,17 +75,9 @@ export default function Navbar() {
 
           {/* Right side */}
           <div style={{ display: "flex", alignItems: "center", gap: 16, flexShrink: 0 }}>
-            <a href="#collection" className="btn-gold hidden-mobile" style={{ padding: "9px 20px", fontSize: 9 }}>
+            <a href="/collection" className="btn-gold hidden-mobile" style={{ padding: "9px 20px", fontSize: 9 }}>
               Discover Collection
             </a>
-            {/* Cart icon */}
-            <button style={{ background: "none", border: "none", cursor: "pointer", color: "#f0ebe0", padding: 4 }} aria-label="Cart">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <path d="M16 10a4 4 0 01-8 0"/>
-              </svg>
-            </button>
             {/* Hamburger */}
             <button
               id="menu-toggle"
@@ -136,7 +117,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="#collection" className="btn-gold" style={{ marginTop: 20, display: "inline-flex" }}>
+            <a href="/collection" className="btn-gold" style={{ marginTop: 20, display: "inline-flex" }}>
               Discover Collection
             </a>
           </div>

@@ -88,31 +88,31 @@ export default function Principles() {
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <div style={{
-            fontSize: 9,
+            fontSize: 11,
             letterSpacing: "0.28em",
             textTransform: "uppercase",
-            fontWeight: 600,
-            color: "#c9a84c",
+            fontWeight: 700,
+            color: "#a8882a",
             marginBottom: 18,
           }}>
             Our Principles
           </div>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(32px, 5vw, 52px)",
-            fontWeight: 400,
+            fontSize: "clamp(34px, 5vw, 54px)",
+            fontWeight: 600,
             lineHeight: 1.15,
-            color: "#1a1a14",
+            color: "#000000",
           }}>
             Beyond Fragrance.
           </h2>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(32px, 5vw, 52px)",
-            fontWeight: 400,
+            fontSize: "clamp(34px, 5vw, 54px)",
+            fontWeight: 500,
             fontStyle: "italic",
             lineHeight: 1.15,
-            color: "#1a1a14",
+            color: "#000000",
           }}>
             An Expression of You.
           </h2>
@@ -142,7 +142,7 @@ export default function Principles() {
 
               <TitleParts parts={p.titleParts} />
 
-              <p style={{ fontSize: 12, fontWeight: 300, lineHeight: 1.85, color: "#5a5245" }}>
+              <p style={{ fontSize: 15, fontWeight: 400, lineHeight: 1.7, color: "#3a342d" }}>
                 {p.desc}
               </p>
             </div>

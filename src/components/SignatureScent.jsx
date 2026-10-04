@@ -29,7 +29,6 @@ export default function SignatureScent() {
             color: "#c9a84c",
             marginBottom: 24,
           }}>
-            Private Salon &amp; Bespoke Consultation
           </div>
 
           <h2 style={{
@@ -55,10 +54,10 @@ export default function SignatureScent() {
           </h2>
 
           <p style={{
-            fontSize: 13,
-            fontWeight: 300,
+            fontSize: 15,
+            fontWeight: 400,
             lineHeight: 1.85,
-            color: "#5a5245",
+            color: "#3a342d",
             marginBottom: 36,
             maxWidth: 500,
             margin: "0 auto 36px",
@@ -83,7 +82,7 @@ export default function SignatureScent() {
           </a>
 
           <div style={{ marginTop: 8, fontSize: 10, color: "#8a7e6e", letterSpacing: "0.08em" }}>
-            +971 4 000 4300 • Street 4/F, Concierge
+            +91 8144334641 • Park street, Berhampur
           </div>
 
           <div style={{ marginTop: 16, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>

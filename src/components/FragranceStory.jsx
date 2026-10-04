@@ -41,7 +41,7 @@ export default function FragranceStory() {
           >
             <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500, color: "#c9a84c" }}>
               <span style={{ display: "inline-block", width: 28, height: 1, background: "#c9a84c" }} />
-              The Noor Essence Experience
+              The Chandan Craft Experience
             </span>
           </div>
 
@@ -68,14 +68,14 @@ export default function FragranceStory() {
           </h2>
 
           <p style={{
-            fontSize: 13,
-            fontWeight: 300,
+            fontSize: 15,
+            fontWeight: 400,
             lineHeight: 1.85,
-            color: "#4a4438",
+            color: "#3a342d",
             marginBottom: 36,
             maxWidth: 440,
           }}>
-            At Noor Essence, every fragrance is an{" "}
+            At Chandan Craft, every fragrance is an{" "}
             <strong style={{ fontWeight: 500, color: "#1a1a14" }}>expression of individuality</strong>,
             crafted with{" "}
             <strong style={{ fontWeight: 500, color: "#c9a84c" }}>passion</strong> and inspired by the timeless
@@ -100,7 +100,7 @@ export default function FragranceStory() {
                   }}>
                     {f.label}
                   </div>
-                  <div style={{ fontSize: 12, fontWeight: 300, lineHeight: 1.75, color: "#6a6050" }}>
+                  <div style={{ fontSize: 14, fontWeight: 400, lineHeight: 1.75, color: "#3a342d" }}>
                     {f.desc}
                   </div>
                 </div>

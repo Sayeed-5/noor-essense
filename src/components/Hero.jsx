@@ -64,8 +64,8 @@ export default function Hero() {
           {/* Description */}
           <p style={{
             fontFamily: "'Montserrat', sans-serif",
-            fontSize: 13,
-            fontWeight: 300,
+            fontSize: 15,
+            fontWeight: 400,
             lineHeight: 1.8,
             color: "#c8bfa8",
             maxWidth: 420,
@@ -79,10 +79,10 @@ export default function Hero() {
 
           {/* CTAs */}
           <div style={{ display: "flex", alignItems: "center", gap: 28, flexWrap: "wrap", marginBottom: 48 }}>
-            <a href="#collection" className="btn-gold">
+            <a href="/collection" className="btn-gold">
               Explore Collection
             </a>
-            <a href="#our-story" className="discover-link">
+            <a href="/#our-story" className="discover-link">
               Discover Our Story &nbsp;→
             </a>
           </div>
@@ -157,7 +157,7 @@ export default function Hero() {
                   backdropFilter: "blur(8px)",
                   padding: "8px 12px",
                 }}>
-                  <span style={{ fontSize: 9, letterSpacing: "0.15em", color: "#7a7060", textTransform: "uppercase" }}>noor_essence</span>
+                  <span style={{ fontSize: 9, letterSpacing: "0.15em", color: "#7a7060", textTransform: "uppercase" }}>chandan_craft</span>
                 </div>
               </div>
             </div>
